@@ -39,7 +39,7 @@ tabela_litros['Litros Exportados'] = tabela_litros['Litros Exportados'].apply(fo
 
 # Mostrando com st.dataframe
 st.write('Tabela por Preço')
-st.dataframe(tabela_preco, height=400)
+st.dataframe(tabela_preco)
 
 st.write('Tabela por Litros Exportados')
-st.dataframe(tabela_litros, height=400)
+st.dataframe(tabela_litros)
