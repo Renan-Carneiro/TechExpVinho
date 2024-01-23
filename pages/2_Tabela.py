@@ -14,9 +14,11 @@ tabela = tabela.loc[(tabela['Preço Dólar'] != 0) | (tabela['Litros Exportados'
 
 # por preço em ordem decrescente
 tabela_preco = tabela.sort_values(by='Preço Dólar', ascending=False).reset_index(drop=True)
+tabela_preco.index += 1
 
 # por litros em ordem decrescente
 tabela_litros = tabela.sort_values(by='Litros Exportados', ascending=False).reset_index(drop=True)
+tabela_litros.index += 1
 
 st.write('Tabela por Preço')
 st.write(tabela_preco)
