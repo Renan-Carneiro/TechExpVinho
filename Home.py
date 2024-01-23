@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 
 
 
-st.set_page_config(page_title='Controle de Procedimentos RIVOA' , page_icon='✔' , layout='wide')
+st.set_page_config(page_title='Tech Challenge: Exportação Vinhos' , page_icon='✔' , layout='wide')
 st.sidebar.success("Selecione uma página acima.")
 
 
@@ -17,24 +17,25 @@ def load_lottieurl(url):
 
 
 #asset
-lottie_animation = load_lottieurl('https://lottie.host/71b5d1e5-c0cc-413a-9332-76e9149aa814/UxkWDNiGoE.json')
+lottie_animation = load_lottieurl('https://lottie.host/111a3f73-01e4-4490-bf68-f65603ae33b8/iFJ2cro5CJ.json')
 
 #Header
 with st.container():
 
     st.title('Bem vindo(a)')
-    st.title('Controle de Procedimentos RIVOA')
+    st.title('Tech Challenge: Exportação Vinhos')
     st.subheader('Use a barra de navegação ao lado para navegar')
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header('Rivoa')
+        st.header('O problema')
         st.write(
             """
-            A equipe RIVOA atua no segmento da radiologia intervencionista. A especialidade utiliza métodos de imagem como ultrassonografia, RX e tomografia computadorizada para guiar os procedimentos minimamente invasivos.
+           No trabalho atuamos como Experts em Data Analytics em uma empresa que exporta vinhos do Brasil para o mundo.
+           Nossa área é responsável pelos relatórios iniciais a serem apresentados em uma reunião de investidores e acionistas, explicando a quantidade de vinhos exportados e os fatores externos que podem vir a surgir e interferir nas análises.
             """
         )
-        st.write('[Website](https://rivoa.com.br/)')
+        st.write('[FIAP](https://postech.fiap.com.br/)')
     with right_column:
-        st_lottie(lottie_animation,height=300,key='medicos')
+        st_lottie(lottie_animation,height=300,key='vinhos')
