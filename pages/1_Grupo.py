@@ -16,7 +16,12 @@ st.title("Grupo Responsável")
 
 # Display student information using badges
 for student in student_data:
-    st.card(
-        f"**Nome:** {student['nome']}\n**Número de Matrícula:** {student['matricula']}",
-        use_container_width=True,
+    st.markdown(
+        f"""
+        <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p><strong>Nome:</strong> {student['nome']}</p>
+            <p><strong>Número de Matrícula:</strong> {student['matricula']}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
