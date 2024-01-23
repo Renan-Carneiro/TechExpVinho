@@ -13,10 +13,10 @@ tabela = df.groupby('País').agg({'Litros Exportados': 'sum', 'Preço Dólar': '
 tabela = tabela.loc[(tabela['Preço Dólar'] != 0) | (tabela['Litros Exportados'] != 0)]
 
 # por preço em ordem decrescente
-tabela_preco = tabela.sort_values(by='Preço Dólar', ascending=False)
+tabela_preco = tabela.sort_values(by='Preço Dólar', ascending=False).reset_index(drop=True)
 
 # por litros em ordem decrescente
-tabela_litros = tabela.sort_values(by='Litros Exportados', ascending=False)
+tabela_litros = tabela.sort_values(by='Litros Exportados', ascending=False).reset_index(drop=True)
 
 st.write('Tabela por Preço')
 st.write(tabela_preco)
