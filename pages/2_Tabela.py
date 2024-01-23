@@ -23,9 +23,9 @@ tabela_litros.index += 1
 #função para mostrar em milhões com 3 casa decimais, ou outro formato se for muito pequeno
 def format_magnitude(x):
     if abs(x) >= 0.1 * 1e6:
-        return "{:.3f}M".format(x / 1e6)
+        return "{:.3f} Milhões".format(x / 1e6)
     elif abs(x) >= 1e3:
-        return "{:.1f}K".format(x / 1e3)
+        return "{:.1f} mil".format(x / 1e3)
     else:
         return "{:.0f}".format(x)
 
