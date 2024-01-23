@@ -16,6 +16,7 @@ st.title("Grupo Responsável")
 
 # Display student information using badges
 for student in student_data:
-    st.markdown(
-        f"### {student['nome']} ![Badge](https://img.shields.io/badge/Matrícula-{student['Matricula']}-brightgreen)"
+    st.card(
+        f"**Nome:** {student['nome']}\n**Número de Matrícula:** {student['matricula']}",
+        use_container_width=True,
     )
