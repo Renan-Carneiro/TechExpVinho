@@ -31,7 +31,9 @@ tabela_preco['Litros Exportados'] = tabela_preco['Litros Exportados'].apply(form
 tabela_litros['Preço Dólar'] = tabela_litros['Preço Dólar'].apply(format_millions)
 tabela_litros['Litros Exportados'] = tabela_litros['Litros Exportados'].apply(format_millions)
 
+# Mostrando com st.dataframe
 st.write('Tabela por Preço')
-st.write(tabela_preco)
+st.dataframe(tabela_preco.style.format({'Preço Dólar': '{:.3f}M'}), height=400)
+
 st.write('Tabela por Litros Exportados')
-st.write(tabela_litros)
+st.dataframe(tabela_litros.style.format({'Litros Exportados': '{:.3f}M'}), height=400)
