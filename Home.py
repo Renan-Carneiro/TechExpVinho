@@ -29,7 +29,7 @@ with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header('O problema')
+        st.header('O Desafio')
         st.write(
             """
            No trabalho atuamos como Experts em Data Analytics em uma empresa que exporta vinhos do Brasil para o mundo.
