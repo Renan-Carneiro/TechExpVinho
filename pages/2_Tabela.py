@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('Tabelas com os Dados')
+st.title('Placeholder')
 
 url='https://raw.githubusercontent.com/Renan-Carneiro/TechExpVinho/main/ExpVinhoTratado.csv'
 df = pd.read_csv(url, index_col=0)
@@ -37,10 +37,6 @@ tabela_preco['Litros Exportados'] = tabela_preco['Litros Exportados'].apply(form
 tabela_litros['Preço Dólar'] = tabela_litros['Preço Dólar'].apply(format_magnitude)
 tabela_litros['Litros Exportados'] = tabela_litros['Litros Exportados'].apply(format_magnitude)
 
-#adicionando uma observação para o país de origem
-origem = pd.DataFrame({'Observação': ['País de origem: Brasil']})
-tabela_preco = pd.concat([tabela_preco.iloc[:1], origem, tabela_preco.iloc[1:]], ignore_index=True)
-tabela_litros = pd.concat([tabela_litros.iloc[:1], origem, tabela_litros.iloc[1:]], ignore_index=True)
 # Mostrando com st.dataframe
 st.write('Tabela por Litros Exportados')
 st.dataframe(tabela_litros)
