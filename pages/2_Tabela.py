@@ -20,6 +20,17 @@ tabela_preco.index += 1
 tabela_litros = tabela.sort_values(by='Litros Exportados', ascending=False).reset_index(drop=True)
 tabela_litros.index += 1
 
+#função para mostrar em milhões com 3 casa decimais
+format_millions = lambda x: "{:.3f}M".format(x / 1000000)
+
+#modificando valores na tabela de preço
+tabela_preco['Preço Dólar'] = tabela_preco['Preço Dólar'].apply(format_millions)
+tabela_preco['Litros Exportados'] = tabela_preco['Litros Exportados'].apply(format_millions)
+
+#modificando valores na tabela de litros
+tabela_litros['Preço Dólar'] = tabela_litros['Preço Dólar'].apply(format_millions)
+tabela_litros['Litros Exportados'] = tabela_litros['Litros Exportados'].apply(format_millions)
+
 st.write('Tabela por Preço')
 st.write(tabela_preco)
 st.write('Tabela por Litros Exportados')
