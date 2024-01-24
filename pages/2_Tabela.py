@@ -38,9 +38,9 @@ tabela_litros['Preço Dólar'] = tabela_litros['Preço Dólar'].apply(format_mag
 tabela_litros['Litros Exportados'] = tabela_litros['Litros Exportados'].apply(format_magnitude)
 
 # Mostrando com st.dataframe
-st.write('Tabela por Litros Exportados')
+st.write('Tabela ordenada por Litros Exportados (País de Origem: Brasil)')
 st.dataframe(tabela_litros)
 
-st.write('Tabela por Preço')
+st.write('Tabela ordenada por Preço (País de Origem: Brasil)')
 st.dataframe(tabela_preco)
 
