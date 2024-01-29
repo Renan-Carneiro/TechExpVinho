@@ -8,6 +8,7 @@ student_data = [
     {"nome": "Vanessa Andrade", "matricula": "RM352921"},
     {"nome": "Frederico Quesado", "matricula": "RM352633"},
     {"nome": "Lucas Tabelini", "matricula": "RM352725"},
+    {"nome": "Antônio Leão", "matricula": "RM349640"},
     # Add more students as needed
 ]
 
